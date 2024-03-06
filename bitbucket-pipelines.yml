@@ -1,0 +1,18 @@
+
+# Automated unit testing for all branches on push to bitbucket
+
+image: python:3.10
+
+pipelines:
+  default: # runs on all branches!
+    - parallel:
+      - step:
+          name: Test # name of pipeline step
+          caches:
+            - pip
+          script:
+            - pip install --upgrade pip
+            # virtual environment is irrelevant in docker container
+            - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            #- cd tests/
+            - python -m unittest -v  # execute unit tests with -v verbose mode on
