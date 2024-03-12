@@ -1,8 +1,6 @@
 # Example Package
 
-This is a simple example package. You can use
-[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-to write your content.
+https://www.baeldung.com/linux/create-debian-package    for packaging
 
 
 # pdoc3 as easy as it gets
